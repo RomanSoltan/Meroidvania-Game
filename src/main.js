@@ -12,4 +12,4 @@ k.scene('room2', () => {
 
 k.scene('intro', () => {});
 
-k.go('intro');
+k.go('room1');
