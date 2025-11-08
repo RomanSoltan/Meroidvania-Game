@@ -5,6 +5,7 @@ export const k = kaboom({
   width: 640 * scale,
   height: 360 * scale,
   scale,
+  // made adaptive
   letterbox: true,
   global: false,
 });
