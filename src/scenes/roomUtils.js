@@ -18,15 +18,15 @@ export function setMapsColliders(k, map, colliders) {
         k.pos(collider.x, collider.y),
         k.area({
           shape: new k.Polygon(coordinates),
-          collisionIgnore: ["collider"],
+          collisionIgnore: ['collider'],
         }),
-        "collider",
+        'collider',
         collider.type,
       ]);
       continue;
     }
 
-    if (collider.name === "boss-barrier") {
+    if (collider.name === 'boss-barrier') {
       // TODO
       continue;
     }
@@ -35,10 +35,10 @@ export function setMapsColliders(k, map, colliders) {
       k.pos(collider.x, collider.y),
       k.area({
         shape: new k.Rect(k.vec2(0), collider.width, collider.height),
-        collisionIgnore: ["collider"],
+        collisionIgnore: ['collider'],
       }),
       k.body({ isStatic: true }),
-      "collider",
+      'collider',
       collider.type,
     ]);
   }
