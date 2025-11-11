@@ -8,4 +8,4 @@ Live demo : https://romansoltan.github.io/Meroidvania-Game/
 
 How I learned to build this from tutorial : https://www.youtube.com/watch?v=UWHiMgFjRrU
 
-Special thanks to : @jslegenddev
+Special thanks to : https://www.youtube.com/@JSLegendDev
