@@ -4,6 +4,8 @@ A simple metroidvania style game made in JavaScript with the Kaboom.js library.
 
 ![image of the game](./screenshot.png)
 
-Live demo : https://meroidvania-game.vercel.app/
+Live demo : https://romansoltan.github.io/Meroidvania-Game/
 
-Tutorial on how to build this : https://www.youtube.com/watch?v=UWHiMgFjRrU
+How I learned to build this from tutorial : https://www.youtube.com/watch?v=UWHiMgFjRrU
+
+Special thanks to : @jslegenddev
