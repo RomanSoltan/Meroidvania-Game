@@ -1,4 +1,4 @@
-import { state } from '../state/globalStateManager.js';
+import { state } from "../state/globalStateManager.js";
 
 export function setBackgroundColor(k, hexColorCode) {
   k.add([
@@ -20,16 +20,16 @@ export function setMapsColliders(k, map, colliders) {
         k.pos(collider.x, collider.y),
         k.area({
           shape: new k.Polygon(coordinates),
-          collisionIgnore: ['collider'],
+          collisionIgnore: ["collider"],
         }),
         k.body({ isStatic: true }),
-        'collider',
+        "collider",
         collider.type,
       ]);
       continue;
     }
 
-    if (collider.name === 'boss-barrier') {
+    if (collider.name === "boss-barrier") {
       // TODO
       continue;
     }
@@ -38,10 +38,10 @@ export function setMapsColliders(k, map, colliders) {
       k.pos(collider.x, collider.y),
       k.area({
         shape: new k.Rect(k.vec2(0), collider.width, collider.height),
-        collisionIgnore: ['collider'],
+        collisionIgnore: ["collider"],
       }),
       k.body({ isStatic: true }),
-      'collider',
+      "collider",
       collider.type,
     ]);
   }
@@ -73,12 +73,12 @@ export function setCameraZones(k, map, cameras) {
     const cameraZone = map.add([
       k.area({
         shape: new k.Rect(k.vec2(0), camera.width, camera.height),
-        collisionIgnore: ['collider'],
+        collisionIgnore: ["collider"],
       }),
       k.pos(camera.x, camera.y),
     ]);
 
-    cameraZone.onCollide('player', () => {
+    cameraZone.onCollide("player", () => {
       if (k.camPos().x !== camera.properties[0].value) {
         k.tween(
           k.camPos().y,
