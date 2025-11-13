@@ -100,6 +100,19 @@ export function makePlayer(k) {
           }),
         );
       },
+      disableControls() {
+        for (const handler of this.controlHandlers) {
+          handler.cancel();
+        }
+      },
+
+      respawnIfOutBounds(
+        boundValue,
+        destinationName,
+        previousSceneData = { exitName: null },
+      ) {
+        // TODO
+      },
       setEvents() {
         this.onFall(() => {
           this.play("fall");
