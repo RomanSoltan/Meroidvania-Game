@@ -33,7 +33,7 @@ export function makePlayer(k) {
 
         this.controlHandlers.push(
           k.onKeyPress(key => {
-            if (key === "x") {
+            if (key === "space") {
               if (this.curAnim() !== "jump") this.play("jump");
               this.doubleJump();
             }
@@ -144,11 +144,19 @@ export function makePlayer(k) {
             return;
           }
 
-          state.set(statePropsEnum.playerHp, state.current().maxPlayerHp);
           k.play("boom");
           this.play("explode");
-          // 3:32:10
+          state.set(statePropsEnum.playerHp, state.current().maxPlayerHp);
         });
+
+        this.onAnimEnd(anim => {
+          if (anim === "explode") {
+            k.go("room1");
+          }
+        });
+      },
+      enableDoubleJump() {
+        this.numJumps = 2;
       },
     },
   ]);
