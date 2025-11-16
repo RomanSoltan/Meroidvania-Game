@@ -108,12 +108,16 @@ export function makePlayer(k) {
         }
       },
 
-      respawnIfOutBounds(
+      respawnIfOutOfBounds(
         boundValue,
         destinationName,
         previousSceneData = { exitName: null },
       ) {
-        // TODO
+        k.onUpdate(() => {
+          if (this.pos.y > boundValue) {
+            k.go(destinationName, previousSceneData);
+          }
+        });
       },
       setEvents() {
         this.onFall(() => {
